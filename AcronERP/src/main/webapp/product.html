@@ -23,17 +23,20 @@
             <div>
                 <header>
 <!-- 상단 메뉴바 시작 -->
-                    <nav class="py-2 bg-light border-bottom">
-                        <div class="container d-flex justify-content-between align-items-center">
-                            <ul class="nav">
-                                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">AcronErp</a></li>
-                            </ul>
-                            <ul class="nav">
-                                <li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">로그인</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">회원가입</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+					<nav class="py-2 bg-light border-bottom">
+						<div class="container d-flex justify-content-between align-items-center">
+							<ul class="nav">
+								<li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">AcornErp</a></li>
+							</ul>
+							<ul class="nav">
+								<li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">공지사항</a></li>
+								<li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">환경설정</a></li>
+								<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+								<li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">로그인</a></li>
+								<li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">회원가입</a></li>
+							</ul>
+						</div>
+					</nav> 
 <!-- 상단 메뉴바 끝 -->   
                 </header>
             </div>
@@ -249,7 +252,7 @@
         </div>
     </div>
 
-<!-- 체크박스 전체선택 -->
+<!-- 체크박스 전체 선택 -->
 <script>
     // 제일 상단의 체크박스 요소를 가져옵니다.
     const masterCheckbox = document.getElementById('flexCheckDefault');
@@ -265,7 +268,8 @@
         });
     });
 </script>
-    
+   
+<!-- 등록 함수 -->
 <script>
     // 등록 버튼 클릭 시 실행될 함수
     function addRow() {
@@ -283,15 +287,15 @@
 	                    <option value="쿠키">쿠키</option>
 	                </select>
             	</td>
-                <td><input type="text" class="form-control" placeholder="상품명"></td>
+                <td><input type="text" class="form-control" placeholder="상품명" required></td>
                 <td>
 	                <select class="form-control">
 	                	<option value="판매중">판매중</option>
 	                    <option value="품절">품절</option>
 	                </select>
             	</td>
-                <td><input type="text" class="form-control" placeholder="단가"></td>
-                <td><input type="text" class="form-control" placeholder="상품수량"></td>
+                <td><input type="text" class="form-control" placeholder="단가" required></td>
+                <td><input type="text" class="form-control" placeholder="상품수량" required></td>
                 <td><button class="btn btn-primary" onclick="submitRow()">추가</button></td>
             </tr>
         `;
@@ -308,39 +312,55 @@
         input.style.fontWeight = 'bold';
     }
 
-    // 등록된 값들을 테이블에 추가하는 함수
+	// 등록된 값들을 테이블에 추가하는 함수
     function submitRow() {
-        // 테이블의 tbody 요소를 가져옵니다.
-        var tableBody = document.querySelector('.table tbody');
-
         // 입력된 값들을 가져옵니다.
         var inputs = document.querySelectorAll('.input-form input[type="text"], .input-form input[type="number"], .input-form select');
 
-        // 새로운 행(tr 요소)를 생성합니다.
-        var newRow = document.createElement('tr');
+        // 입력된 값이 유효한지 검사합니다.
+        var isValid = true;
+        inputs.forEach(function(input) {
+            if (input.hasAttribute('required') && input.value.trim() === '') {
+                // 필수 입력 필드가 비어있는 경우
+                isValid = false;
+                input.classList.add('is-invalid'); // Bootstrap에서 제공하는 입력 필드에 오류 스타일 적용
+            }
+        });
 
-        // 새로운 행의 HTML 내용을 설정합니다.
-        newRow.innerHTML = `
-            <td><input type="checkbox" class="form-check-input" value=""></td>
-            <td><strong>${inputs[0].value}</strong></td>
-            <td>${inputs[1].value}</td>
-            <td>${inputs[2].value}</td>
-            <td>${inputs[3].value}</td>
-            <td>${inputs[4].value}</td>
-            <td>${inputs[5].value}</td>
-            <td>${inputs[6].value}</td>
-        `;
+        // 유효한 값인지 확인하고, 테이블에 행을 추가합니다.
+        if (isValid) {
+            // 테이블의 tbody 요소를 가져옵니다.
+            var tableBody = document.querySelector('.table tbody');
 
-        // 테이블의 첫 번째 자식으로 새로운 행을 추가합니다.
-        tableBody.insertBefore(newRow, tableBody.firstChild);
+            // 새로운 행(tr 요소)를 생성합니다.
+            var newRow = document.createElement('tr');
 
-        // 입력 폼을 제거합니다.
-        var inputForm = document.querySelector('.input-form');
-        inputForm.remove();
+            // 새로운 행의 HTML 내용을 설정합니다.
+            newRow.innerHTML = `
+                <td><input type="checkbox" class="form-check-input" value=""></td>
+                <td><strong>${inputs[0].value}</strong></td>
+                <td>${inputs[1].value}</td>
+                <td>${inputs[2].value}</td>
+                <td>${inputs[3].value}</td>
+                <td>${inputs[4].value}</td>
+                <td>${inputs[5].value}</td>
+                <td>${inputs[6].value}</td>
+            `;
+
+            // 테이블의 첫 번째 자식으로 새로운 행을 추가합니다.
+            tableBody.insertBefore(newRow, tableBody.firstChild);
+
+            // 입력 폼을 제거합니다.
+            var inputForm = document.querySelector('.input-form');
+            inputForm.remove();
+        } else {
+            // 필수 입력 필드가 비어있는 경우, 사용자에게 경고를 표시합니다.
+            // alert('필수 입력 필드를 모두 작성해주세요.');
+        }
     }
 </script>
 
-
+<!-- 수정 함수 -->
 <script>
     // 수정 버튼 클릭 시 실행될 함수
     function updateRow() {
@@ -403,8 +423,9 @@
     }
 </script>
 
+<!-- 삭제 함수 -->
 <script>
- // 삭제 버튼 클릭 시 실행될 함수
+	// 삭제 버튼 클릭 시 실행될 함수
     function deleteRow() {
         // 모든 체크박스 요소를 가져옵니다.
         const checkboxes = document.querySelectorAll('.table tbody .form-check-input');
@@ -425,12 +446,5 @@
         }
     }
 </script>
-
-
-
-
-
-
-
 </body>
 </html>
