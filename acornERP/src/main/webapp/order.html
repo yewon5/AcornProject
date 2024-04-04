@@ -82,7 +82,7 @@
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="order.html" class="link-dark rounded" style="color: #007BFF !important; margin-right: 10px; font-weight: bold;">주문 관리</a></li>
                                     <li><a href="product.html" class="link-dark rounded">상품 관리</a></li>
-                                    <li><a href="inventory.html" class="link-dark rounded">재고 관리</a></li>
+                                    <li><a href="inventory.html" class="link-dark rounded">상품 재고 관리</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -146,19 +146,28 @@
 						<!--<input type="button" class="btn btn-primary btn-sm float-end" value="등록" onclick="addRow()">-->
                     </div>    
                     <!-- 테이블 상단 소분류 버튼 시작-->
-                                   
-<div style="text-align: right; margin-right: 30px; margin-bottom: 10px;">
-    <form style="display: inline-block;">
-        <input type="date" style="vertical-align: middle; ">
-        <input type="submit" value="전송" class="btn btn-primary btn-sm" style="vertical-align: middle; ">
-    </form>
-    <input type="button" class="btn btn-primary btn-sm" value="등록" onclick="addRow()" style="vertical-align: middle; margin-left: 5px;">
-    <!--<button type="button" class="btn btn-primary btn-sm">수정</button>
-    <button type="button" class="btn btn-primary btn-sm">삭제</button>-->
-</div>
-
-
                     
+					<!-- 달력/검색/등록수정삭제 기능 시작 -->                                   
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <!-- 달력과 검색창 -->
+    <div class="calendar-search">
+        <form>
+            <input type="date">
+            <input type="date">
+            <input type="submit" value="조회" class="btn btn-primary btn-sm">
+        </form>
+        <input type="search" id="search-box" class="form-control bg-light border-0" placeholder="검색" aria-label="검색">
+    </div>
+    
+    <!-- 등록/수정/삭제 버튼 -->
+    <div class="edit-buttons">
+        <input type="button" class="btn btn-primary btn-sm" value="등록" onclick="addRow()">
+        <button type="button" class="btn btn-primary btn-sm">수정</button>
+        <button type="button" class="btn btn-primary btn-sm">삭제</button>
+    </div>
+</div>
+					<!-- 달력/검색/등록수정삭제 기능 끝 -->  
+
                     <div class="right-mid">
                         <section id="sec">
 							<table class="table table-hover" style="word-break: break-all;">
@@ -193,7 +202,7 @@
 										<td>150,000</td>
 										<td>20개씩 담아주세요.</td>
 										<td>결제완료</td>
-										<td><button class="btn btn-outline-primary btn-open-modal" style="padding: 0rem 0.4rem; font-size: 0.7rem;" onclick="fnopen()">등록</button></td>									</tr>
+										<td><button class="btn btn-outline-primary btn-open-modal" style="padding: 0rem 0.4rem; font-size: 0.7rem;">등록</button></td>									</tr>
 									<tr>
 										<th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>									
 										<th scope="row">4</th>
@@ -207,7 +216,7 @@
 										<td>31,000</td>
 										<td>케익칼은 빼주세요!</td>
 										<td>결제완료</td>
-										<td><button class="btn btn-outline-primary btn-open-modal" style="padding: 0rem 0.4rem; font-size: 0.7rem;" onclick="fnopen()">등록</button></td>									</tr>
+										<td><button class="btn btn-outline-primary btn-open-modal" style="padding: 0rem 0.4rem; font-size: 0.7rem;">등록</button></td>									</tr>
 									<tr>
 										<th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>										
 										<th scope="row">3</th>
@@ -251,7 +260,7 @@
 										<td>75,000</td>
 										<td></td>
 										<td>결제완료</td>
-										<td><button class="btn btn-outline-primary btn-open-modal" style="padding: 0rem 0.4rem; font-size: 0.7rem;" onclick="fnopen()">등록</button></td>
+										<td><button class="btn btn-outline-primary btn-open-modal" style="padding: 0rem 0.4rem; font-size: 0.7rem;">등록</button></td>									</tr>
 										</tr>
 								</tbody>
 							</table>
@@ -364,13 +373,17 @@
     });
 </script>
 
-<!-- 모달창 띄우기 -->
-<script>
-	const modal = document.querySelector('.modal');
-	const btnOpenModal=document.querySelector('.btn-open-modal');
 
-	btnOpenModal.addEventListener("click", ()=>{
-	 modal.style.display="flex";
+<script>
+	//모달창 띄우기
+	const modal = document.querySelector('.modal');
+
+	const btnOpenModalList = document.querySelectorAll('.btn-open-modal');
+
+	btnOpenModalList.forEach(btn => {
+    	btn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    	});
 	});
 
 	//'x'버튼 누르면 운송장번호 인풋창 클리어	
@@ -416,5 +429,71 @@
 		});
 	})
 </script>
+
+<!-- 검색창 -->
+<script>
+    // DOMContentLoaded 이벤트가 발생하면, 콜백함수 실행
+    document.addEventListener('DOMContentLoaded', function() {
+        // 검색창 element를 id값으로 가져오기
+        const payrollSearch = document.querySelector('#search-box');
+        // 테이블의 tbody element를 id값으로 가져오기
+        const payrollTable = document.querySelector('#sec tbody');
+
+        // 검색창 element에 keyup 이벤트 세팅. 글자 입력 시 마다 발생.
+        payrollSearch.addEventListener('keyup', function() {
+            // 사용자가 입력한 검색어의 value값을 가져와 소문자로 변경하여 filterValue에 저장
+            const filterValue = payrollSearch.value.toLowerCase();
+            // 현재 tbody안에 있는 모든 tr element를 가져와 rows에 저장
+            const rows = payrollTable.querySelectorAll('tr');
+
+            //tr들 for문으로 순회
+            for (var i = 0; i < rows.length; i++) {
+                // 현재 순회중인 tr의 textContent를 소문자로 변경하여 rowText에 저장
+                var rowText = rows[i].textContent.toLowerCase();
+                // rowText가 filterValue를 포함하면, 해당 tr은 보여지게 하고, 그렇지 않으면 숨긴다.
+                if (rowText.includes(filterValue)) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tableHeaders = document.querySelectorAll('.table th');
+
+        tableHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const table = document.querySelector('.table');
+                const tableBody = table.querySelector('tbody');
+                const rows = Array.from(tableBody.querySelectorAll('tr'));
+
+                const columnIdx = Array.from(header.parentNode.children).indexOf(header);
+
+                const sortedRows = rows.sort((a, b) => {
+                    const aValue = a.querySelectorAll('td')[columnIdx].textContent.trim();
+                    const bValue = b.querySelectorAll('td')[columnIdx].textContent.trim();
+                    
+                    // 숫자인 경우 숫자로 변환하여 정렬
+                    if (!isNaN(parseFloat(aValue)) && !isNaN(parseFloat(bValue))) {
+                        return parseFloat(aValue) - parseFloat(bValue);
+                    } else {
+                        // 문자열인 경우 문자열로 정렬
+                        return aValue.localeCompare(bValue);
+                    }
+                });
+
+                tableBody.innerHTML = '';
+                sortedRows.forEach(row => {
+                    tableBody.appendChild(row);
+                });
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
