@@ -147,26 +147,26 @@
                     </div>    
                     <!-- 테이블 상단 소분류 버튼 시작-->
                     
-					<!-- 달력/검색/등록수정삭제 기능 시작 -->                                   
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <!-- 달력과 검색창 -->
-    <div class="calendar-search">
-        <form>
-            <input type="date">
-            <input type="date">
-            <input type="submit" value="조회" class="btn btn-primary btn-sm">
-        </form>
-        <input type="search" id="search-box" class="form-control bg-light border-0" placeholder="검색" aria-label="검색">
-    </div>
-    
-    <!-- 등록/수정/삭제 버튼 -->
-    <div class="edit-buttons">
-        <input type="button" class="btn btn-primary btn-sm" value="등록" onclick="addRow()">
-        <button type="button" class="btn btn-primary btn-sm">수정</button>
-        <button type="button" class="btn btn-primary btn-sm">삭제</button>
-    </div>
-</div>
-					<!-- 달력/검색/등록수정삭제 기능 끝 -->  
+                    <!-- 테이블 상단 버튼 시작-->	
+					<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+					    <!-- 달력과 검색창 -->
+					    <div class="calendar-search">
+					        <form>
+					            <input type="date">
+					            <input type="date">
+					            <input type="submit" value="조회" class="btn btn-primary btn-sm">
+							</form>
+							<input type="search" id="search-box" class="form-control bg-light border-0" placeholder="검색" aria-label="검색">
+						</div>
+		    
+		    				<!-- 등록/수정/삭제 버튼 -->
+							<div class="edit-buttons">
+								<input type="button" class="btn btn-primary btn-sm" value="등록" onclick="addRow()">
+								<button type="button" class="btn btn-primary btn-sm" onclick="updateRow()">수정</button>
+								<button type="button" class="btn btn-primary btn-sm" onclick="deleteRow()">삭제</button>
+							</div>
+					</div>
+                    <!-- 테이블 상단 버튼 끝-->	
 
                     <div class="right-mid">
                         <section id="sec">
@@ -457,40 +457,6 @@
                     rows[i].style.display = 'none';
                 }
             }
-        });
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const tableHeaders = document.querySelectorAll('.table th');
-
-        tableHeaders.forEach(header => {
-            header.addEventListener('click', () => {
-                const table = document.querySelector('.table');
-                const tableBody = table.querySelector('tbody');
-                const rows = Array.from(tableBody.querySelectorAll('tr'));
-
-                const columnIdx = Array.from(header.parentNode.children).indexOf(header);
-
-                const sortedRows = rows.sort((a, b) => {
-                    const aValue = a.querySelectorAll('td')[columnIdx].textContent.trim();
-                    const bValue = b.querySelectorAll('td')[columnIdx].textContent.trim();
-                    
-                    // 숫자인 경우 숫자로 변환하여 정렬
-                    if (!isNaN(parseFloat(aValue)) && !isNaN(parseFloat(bValue))) {
-                        return parseFloat(aValue) - parseFloat(bValue);
-                    } else {
-                        // 문자열인 경우 문자열로 정렬
-                        return aValue.localeCompare(bValue);
-                    }
-                });
-
-                tableBody.innerHTML = '';
-                sortedRows.forEach(row => {
-                    tableBody.appendChild(row);
-                });
-            });
         });
     });
 </script>

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
 <meta charset="utf-8">
 
 <!-- jQuery -->
@@ -13,36 +20,46 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <link rel="stylesheet" href="main.css">
+<style>
 
-<title>AcornErp</title>
+
+	.form-control{
+		text-align:center;
+		font-size:12px;
+	}
+	
+	.form-control::placeholder {
+  		text-align: center;
+	}
+	
+</style>
+
+<title>AcronErp</title>
 </head>
 <body>
     <div id="Frame">
         <div id="header_Frame">
             <div>
                 <header>
-<!-- ìƒë‹¨ ë©”ë‰´ë°” ì‹œì‘ -->
-					<nav class="py-2 bg-light border-bottom">
-						<div class="container d-flex justify-content-between align-items-center">
-							<ul class="nav">
-								<li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">AcornErp</a></li>
-							</ul>
-							<ul class="nav">
-								<li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">ê³µì§€ì‚¬í•­</a></li>
-								<li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">í™˜ê²½ì„¤ì •</a></li>
-								<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;</li>
-								<li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">ë¡œê·¸ì¸</a></li>
-								<li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">íšŒì›ê°€ì…</a></li>
-							</ul>
-						</div>
-					</nav> 
-<!-- ìƒë‹¨ ë©”ë‰´ë°” ë -->   
+<!-- »ó´Ü ¸Ş´º¹Ù ½ÃÀÛ -->
+                    <nav class="py-2 bg-light border-bottom">
+                        <div class="container d-flex justify-content-between align-items-center">
+                            <ul class="nav">
+                                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">AcronErp</a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">·Î±×ÀÎ</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link link-dark px-2" style="font-size: 14px;">È¸¿ø°¡ÀÔ</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+<!-- »ó´Ü ¸Ş´º¹Ù ³¡ -->   
                 </header>
             </div>
         </div>
         <div id="body_Frame">
             <div class="body_flow">
-<!-- ì‚¬ì´ë“œ ë©”ë‰´ë°” ì‹œì‘ -->
+<!-- »çÀÌµå ¸Ş´º¹Ù ½ÃÀÛ -->
                 <div class="flex-shrink-0 p-3 bg-white" style="width: 200px;">
                     <a href="main.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
                         <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
@@ -54,7 +71,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
                                     <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
                                 </svg>
-                                íšŒì›
+                                È¸¿ø
                             </button>
                             <div class="collapse" id="member-collapse" style="">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -69,13 +86,13 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
                                     <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
                                 </svg>
-                                íŒë§¤
+                                ÆÇ¸Å
                             </button>
                             <div class="collapse show" id="orders-collapse">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-        							<li><a href="order.html" class="link-dark rounded" >ì£¼ë¬¸ ê´€ë¦¬</a></li>
-        							<li><a href="product.html" class="link-dark rounded" style="color: #007BFF !important; margin-right: 10px; font-weight: bold;">ìƒí’ˆ ê´€ë¦¬</a></li>
-                                    <li><a href="inventory.html" class="link-dark rounded">ìƒí’ˆ ì¬ê³  ê´€ë¦¬</a></li>
+        							<li><a href="order.html" class="link-dark rounded" >ÁÖ¹® °ü¸®</a></li>
+        							<li><a href="product.html" class="link-dark rounded" style="color: #007BFF !important; margin-right: 10px; font-weight: bold;">»óÇ° °ü¸®</a></li>
+                                    <li><a href="inventory.html" class="link-dark rounded">Àç°í °ü¸®</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -84,7 +101,7 @@
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
 							    	<path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
 								</svg>
-					          	ì¬ê³ 
+					          	Àç°í
 					        </button>
 					        <div class="collapse" id="stock-collapse">
 					          	<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -100,7 +117,7 @@
 						        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
 						            <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
 						        </svg>
-						        ì˜ˆì•½
+						        ¿¹¾à
 						    </button>
 						    <div class="collapse" id="reservation-collapse-1">
 						        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -116,7 +133,7 @@
 						        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
 						            <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
 						        </svg>
-						        ë§¤ì…ë§¤ì¶œ
+						        ¸ÅÀÔ¸ÅÃâ
 						    </button>
 						    <div class="collapse" id="account-collapse-2">
 						        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -129,32 +146,19 @@
 						</li>
                     </ul>
                 </div>
-<!-- ì‚¬ì´ë“œ ë©”ë‰´ë°” ë -->
+<!-- »çÀÌµå ¸Ş´º¹Ù ³¡ -->
                 <div class="right">
                     <div class="right-up">
-                        <input type="button" class="btn btn-primary" value="ìƒí’ˆ ê´€ë¦¬"/>
+                        <input type="button" class="btn btn-primary" value="»óÇ° °ü¸®"/>
                     </div>
                     
-                    <!-- í…Œì´ë¸” ìƒë‹¨ ë²„íŠ¼ ì‹œì‘-->	
-					<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-					    <!-- ë‹¬ë ¥ê³¼ ê²€ìƒ‰ì°½ -->
-					    <div class="calendar-search">
-					        <form>
-					            <input type="date">
-					            <input type="date">
-					            <input type="submit" value="ì¡°íšŒ" class="btn btn-primary btn-sm">
-							</form>
-							<input type="search" id="search-box" class="form-control bg-light border-0" placeholder="ê²€ìƒ‰" aria-label="ê²€ìƒ‰">
-						</div>
-		    
-		    				<!-- ë“±ë¡/ìˆ˜ì •/ì‚­ì œ ë²„íŠ¼ -->
-							<div class="edit-buttons">
-								<input type="button" class="btn btn-primary btn-sm" value="ë“±ë¡" onclick="addRow()">
-								<button type="button" class="btn btn-primary btn-sm" onclick="updateRow()">ìˆ˜ì •</button>
-								<button type="button" class="btn btn-primary btn-sm" onclick="deleteRow()">ì‚­ì œ</button>
-							</div>
-					</div>
-                    <!-- í…Œì´ë¸” ìƒë‹¨ ë²„íŠ¼ ë-->	
+                    <!-- Å×ÀÌºí »ó´Ü ¹öÆ° ½ÃÀÛ-->	
+					<div style="text-align:right; margin-right:30px; margin-bottom:10px;">
+						<input type="submit" class="btn btn-primary btn-sm" value="µî·Ï" onclick="addRow()">
+						<button type="submit" class="btn btn-primary btn-sm" onclick="updateRow(this)">¼öÁ¤</button>
+						<button type="submit" class="btn btn-primary btn-sm" onclick="deleteRow()">»èÁ¦</button>
+                    </div>
+                    <!-- Å×ÀÌºí »ó´Ü ¹öÆ° ³¡-->	
 
                     <div class="right-mid">
                         <section id="sec">			
@@ -162,87 +166,86 @@
 								<thead>
 									<tr>
 										<th scope="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-										<th scope="col">ë²ˆí˜¸</th>
-										<th scope="col">ìƒí’ˆë²ˆí˜¸</th>
-										<th scope="col">êµ¬ë¶„</th>
-										<th scope="col">ìƒí’ˆëª…</th>
-										<th scope="col">íŒë§¤ìƒíƒœ</th>
-										<th scope="col">ë‹¨ê°€(ì›)</th>
-										<th scope="col">ìƒí’ˆìˆ˜ëŸ‰(ê°œ)</th>
+										<th scope="col">¹øÈ£</th>
+										<th scope="col">»óÇ°¹øÈ£</th>
+										<th scope="col">±¸ºĞ</th>
+										<th scope="col">»óÇ°¸í</th>
+										<th scope="col">ÆÇ¸Å»óÅÂ</th>
+										<th scope="col">´Ü°¡(¿ø)</th>
+										<th scope="col">»óÇ°¼ö·®(°³)</th>
 									</tr>
 								</thead>
 								<tbody class="table-group-divider">
-									<tr>
+									<tr id="no5">
 										<th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
 										<th scope="row">5</th>
 										<td>1005</td>
-										<td>ë¹µ</td>
-										<td>ì†Œë³´ë£¨</td>
-										<td>íŒë§¤ì¤‘</td>
+										<td>»§</td>
+										<td>¼Òº¸·ç</td>
+										<td>ÆÇ¸ÅÁß</td>
 										<td>1,500</td>
 										<td>10</td>
 									</tr>
-										<tr>
+										<tr id="no4">
 										<th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
 										<th scope="row">4</th>
 										<td>1004</td>
-										<td>ë¹µ</td>
-										<td>ë‹¨íŒ¥ë¹µ</td>
-										<td>íŒë§¤ì¤‘</td>
+										<td>»§</td>
+										<td>´ÜÆÏ»§</td>
+										<td>ÆÇ¸ÅÁß</td>
 										<td>1,500</td>
 										<td>10</td>
 									</tr>
-									<tr>
+									<tr id="no3">
 										<th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>										
 										<th scope="row">3</th>
 										<td>1003</td>
-										<td>ì¼€ì´í¬</td>
-										<td>ì´ˆì½”ì¼€ì´í¬ 1í˜¸</td>
-										<td>íŒë§¤ì¤‘</td>
+										<td>ÄÉÀÌÅ©</td>
+										<td>ÃÊÄÚÄÉÀÌÅ© 1È£</td>
+										<td>ÆÇ¸ÅÁß</td>
 										<td>33,000</td>
 										<td>1</td>									
 									</tr>
-									<tr>
+									<tr id="no2">
 										<th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>										
 										<th scope="row">2</th>
 										<td>1002</td>
-										<td>ì¼€ì´í¬</td>
-										<td>ìƒí¬ë¦¼ì¼€ì´í¬ 1í˜¸</td>
-										<td>íŒë§¤ì¤‘</td>
+										<td>ÄÉÀÌÅ©</td>
+										<td>»ıÅ©¸²ÄÉÀÌÅ© 1È£</td>
+										<td>ÆÇ¸ÅÁß</td>
 										<td>33,000</td>
 										<td>1</td>									
 									</tr>
-									<tr>
+									<tr id="no1">
 										<th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>										
 										<th scope="row">1</th>
 										<td>1001</td>
-										<td>ë¹µ</td>
-										<td>ì—°ìœ ë¸Œë ˆë“œ</td>
-										<td>íŒë§¤ì¤‘</td>
+										<td>»§</td>
+										<td>¿¬À¯ºê·¹µå</td>
+										<td>ÆÇ¸ÅÁß</td>
 										<td>3,000</td>
 										<td>5</td>
 									</tr>								
 								</tbody>
 							</table>
-						<!-- í…Œì´ë¸” í•˜ë‹¨ ë²„íŠ¼ ì‹œì‘-->	
+						<!-- Å×ÀÌºí ÇÏ´Ü ¹öÆ° ½ÃÀÛ-->	
 						<div style="text-align:right; margin-right:20px;">
                     		<button type="button" class="btn btn-primary btn-sm">
-                    		<!-- ì—‘ì…€ ì•„ì´ì½˜ -->
+                    		<!-- ¿¢¼¿ ¾ÆÀÌÄÜ -->
                     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-xls" viewBox="0 0 16 16">
   							<path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM6.472 15.29a1.2 1.2 0 0 1-.111-.449h.765a.58.58 0 0 0 .254.384q.106.073.25.114.143.041.319.041.246 0 .413-.07a.56.56 0 0 0 .255-.193.5.5 0 0 0 .085-.29.39.39 0 0 0-.153-.326q-.152-.12-.462-.193l-.619-.143a1.7 1.7 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.1 1.1 0 0 1-.123-.524q0-.366.19-.639.19-.272.527-.422.338-.15.777-.149.457 0 .78.152.324.153.5.41.18.255.2.566h-.75a.56.56 0 0 0-.12-.258.6.6 0 0 0-.247-.181.9.9 0 0 0-.369-.068q-.325 0-.513.152a.47.47 0 0 0-.184.384q0 .18.143.3a1 1 0 0 0 .405.175l.62.143q.326.075.566.211a1 1 0 0 1 .375.358q.135.222.135.56 0 .37-.188.656a1.2 1.2 0 0 1-.539.439q-.351.158-.858.158-.381 0-.665-.09a1.4 1.4 0 0 1-.478-.252 1.1 1.1 0 0 1-.29-.375m-2.945-3.358h-.893L1.81 13.37h-.036l-.832-1.438h-.93l1.227 1.983L0 15.931h.861l.853-1.415h.035l.85 1.415h.908L2.253 13.94zm2.727 3.325H4.557v-3.325h-.79v4h2.487z"/>
-							</svg> ì—‘ì…€ ë‹¤ìš´ë¡œë“œ</button>
+							</svg> ¿¢¼¿ ´Ù¿î·Îµå</button>
 							
                     		<button type="button" class="btn btn-primary btn-sm">
-                    		<!-- ì¸ì‡„ ì•„ì´ì½˜ -->
+                    		<!-- ÀÎ¼â ¾ÆÀÌÄÜ -->
                     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
   							<path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
   							<path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
-							</svg> ì¸ì‡„</button>
+							</svg> ÀÎ¼â</button>
                     	</div>
-                     	<!-- í…Œì´ë¸” í•˜ë‹¨ ë²„íŠ¼ ë -->	
+                     <!-- Å×ÀÌºí ÇÏ´Ü ¹öÆ° ³¡ -->	
+							
                         </section>
-                        
-						<!-- í˜ì´ì§• ì‹œì‘ -->
 						<nav aria-label="Page navigation example" style="margin-top: 50px;">
 							<ul class="pagination justify-content-center">
 								<li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
@@ -252,137 +255,178 @@
 								<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
 							</ul>
 						</nav>
-						<!-- í˜ì´ì§• ì‹œì‘ -->
-						
-					</div> <!-- class="right-mid" ë -->
-                </div> <!-- class="right" ë -->
+					</div>  
+                </div>
             </div>
-        </div> <!-- id="body_Frame" ë -->
+        </div>
         <div id="footer_Frame">
             <div>
                 <footer>
-                    ìµœí•˜ë‹¨
+                    ÃÖÇÏ´Ü
                 </footer>
             </div>
         </div>
     </div>
 
-<!-- ì²´í¬ë°•ìŠ¤ ì „ì²´ ì„ íƒ -->
+
 <script>
-    // ì œì¼ ìƒë‹¨ì˜ ì²´í¬ë°•ìŠ¤ ìš”ì†Œë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
+
+    //Ã¼Å©¹Ú½º ÀüÃ¼¼±ÅÃ
     const masterCheckbox = document.getElementById('flexCheckDefault');
 
-    // ì œì¼ ìƒë‹¨ì˜ ì²´í¬ë°•ìŠ¤ê°€ ë³€ê²½ë  ë•Œ ì´ë²¤íŠ¸ë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
     masterCheckbox.addEventListener('change', function() {
-        // ëª¨ë“  í•˜ìœ„ ì²´í¬ë°•ìŠ¤ ìš”ì†Œë“¤ì„ ê°€ì ¸ì˜µë‹ˆë‹¤.
         const checkboxes = document.querySelectorAll('.table tbody .form-check-input');
-
-        // ì œì¼ ìƒë‹¨ì˜ ì²´í¬ë°•ìŠ¤ì˜ ìƒíƒœì— ë”°ë¼ ëª¨ë“  í•˜ìœ„ ì²´í¬ë°•ìŠ¤ë¥¼ ì„ íƒ ë˜ëŠ” í•´ì œí•©ë‹ˆë‹¤.
         checkboxes.forEach(checkbox => {
             checkbox.checked = masterCheckbox.checked;
         });
     });
-</script>
-   
-<!-- ë“±ë¡ í•¨ìˆ˜ -->
-<script>
-    // ë“±ë¡ ë²„íŠ¼ í´ë¦­ ì‹œ ì‹¤í–‰ë  í•¨ìˆ˜
+
+    
+    let trCnt = document.getElementsByTagName('tr').length;
+    
+    //µî·Ï ¹öÆ° Å¬¸¯ ½Ã ½ÇÇàµÉ ÇÔ¼ö
     function addRow() {
-        // ì…ë ¥ í¼ì„ ìƒì„±í•©ë‹ˆë‹¤.
-        var inputForm = `
-            <tr class="input-form">
+        let inputForm = `
+            <tr class="input-form" id="no${trCnt}">
                 <td><input type="checkbox" class="form-check-input" value=""></td>
-                <td><input type="text" class="form-control" placeholder="ë²ˆí˜¸" oninput="checkNumberStyle(this)"></td>
-                <td><input type="text" class="form-control" placeholder="ìƒí’ˆë²ˆí˜¸"></td>
+                <td><input type="text" class="form-control" placeholder="¹øÈ£" oninput="checkNumberStyle(this)"></td>
+                <td><input type="text" class="form-control" placeholder="»óÇ°¹øÈ£"></td>
                 <td>
-	                <select class="form-control">
-	                	<option value="ë¹µ">ë¹µ</option>
-	                    <option value="ì¼€ì´í¬">ì¼€ì´í¬</option>
-	                    <option value="ë””ì €íŠ¸">ë””ì €íŠ¸</option>
-	                    <option value="ì¿ í‚¤">ì¿ í‚¤</option>
+	                <select class="form-control form-control-sm">
+	                	<option value="»§">»§</option>
+	                    <option value="ÄÉÀÌÅ©">ÄÉÀÌÅ©</option>
+	                    <option value="µğÀúÆ®">µğÀúÆ®</option>
+	                    <option value="ÄíÅ°">ÄíÅ°</option>
 	                </select>
             	</td>
-                <td><input type="text" class="form-control" placeholder="ìƒí’ˆëª…" required></td>
+            	
+            	<td><input type="text" class="form-control" placeholder="»óÇ°¸í"></td>
                 <td>
 	                <select class="form-control">
-	                	<option value="íŒë§¤ì¤‘">íŒë§¤ì¤‘</option>
-	                    <option value="í’ˆì ˆ">í’ˆì ˆ</option>
+	                	<option value="ÆÇ¸ÅÁß">ÆÇ¸ÅÁß</option>
+	                    <option value="Ç°Àı">Ç°Àı</option>
 	                </select>
             	</td>
-                <td><input type="text" class="form-control" placeholder="ë‹¨ê°€" required></td>
-                <td><input type="text" class="form-control" placeholder="ìƒí’ˆìˆ˜ëŸ‰" required></td>
-                <td><button class="btn btn-primary" onclick="submitRow()">ì¶”ê°€</button></td>
+                <td><input type="number" class="form-control" id="unitPrice" placeholder="´Ü°¡"></td>
+                <td><input type="number" class="form-control" id="quantity" placeholder="»óÇ°¼ö·®"></td>
+				<td><button class="btn btn-outline-primary" style="padding: 0rem 0.4rem; font-size: 0.7rem; margin-right:-10px;" onclick="submitRow()">µî·Ï</button></td>
+				<td><button class="btn btn-outline-primary" style="padding: 0rem 0.4rem; font-size: 0.7rem; margin-right:15px;" onclick="cancleRow()">Ãë¼Ò</button></td>
             </tr>
         `;
 
-        // ì…ë ¥ í¼ì„ í…Œì´ë¸”ì˜ ìƒë‹¨ì— ì¶”ê°€í•©ë‹ˆë‹¤.
-        var tableBody = document.querySelector('.table tbody');
+        let tableBody = document.querySelector('.table tbody');
         tableBody.insertAdjacentHTML('afterbegin', inputForm);
     }
     
+    //Ãë¼Ò ¹öÆ° Å¬¸¯ ½Ã ½ÇÇàµÉ ÇÔ¼ö
+    function cancleRow(){
+        let inputForm = document.querySelector('.input-form');
+        inputForm.remove();
+    	}
+
     
-    // ë²ˆí˜¸ ì…ë ¥ í•„ë“œì˜ ê°’ì´ ë³€ê²½ë  ë•Œ ìŠ¤íƒ€ì¼ì„ ë³€ê²½í•˜ëŠ” í•¨ìˆ˜
+    //¼öÁ¤±â´É
+    //¾îÂ÷ÇÇ ¿­Á¦¸ñ±îÁö Æ÷ÇÔÀÌ´Ï±î ±»ÀÌ +1 ¾ÈÇØµµ µÇ°Ú´Ù.
+	function updateRow(btn) {
+    //Ã¼Å©¹Ú½º ´©¸¥°÷..¸¶ ¤¤µÇ¾î¾ßÇÏ´Âµ¥..±×·³ Ã¼Å©¹Ú½º¸¦ ´©¸¥ ÇàÀÇ id°ªÀ» °¡Á®¿Í¾ßÇÒµí... 
+	  //Å¬¸¯ÇÑ ¾ÆÀÌÄÜÀÇ °¡Àå°¡±î¿î tr¿ä¼Ò¸¦ Ã£À½.
+	  let tr = btn.closest("tr");
+
+	  let category = tr.children[3];
+	  let name = tr.children[4];
+	  let status = tr.children[5];
+	  let unitPrice = tr.children[6];
+	  let quantity = tr.children[7];
+	
+	    category.contentEditable = "true";
+	    name.contentEditable = "true";
+	   	status.contentEditable = "true";
+	   	unitPrice.contentEditable = "true";
+	   	quantity.contentEditable = "true";
+
+  }
+
+    
+    //¹øÈ£ ÀÔ·Â ÇÊµåÀÇ °ªÀÌ º¯°æµÉ ¶§ ½ºÅ¸ÀÏÀ» º¯°æÇÏ´Â ÇÔ¼ö
     function checkNumberStyle(input) {
-        // ë²ˆí˜¸ ì…ë ¥ í•„ë“œì˜ ê°’ì´ ë³€ê²½ë  ë•Œë§ˆë‹¤ í•´ë‹¹ ê°’ì´ ì§„í•˜ê¸°ë¡œ ì„¤ì •ë©ë‹ˆë‹¤.
+        // ¹øÈ£ ÀÔ·Â ÇÊµåÀÇ °ªÀÌ º¯°æµÉ ¶§¸¶´Ù ÇØ´ç °ªÀÌ ÁøÇÏ±â·Î ¼³Á¤µË´Ï´Ù.
         input.style.fontWeight = 'bold';
     }
 
-	// ë“±ë¡ëœ ê°’ë“¤ì„ í…Œì´ë¸”ì— ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜
+    //µî·Ï ¹öÆ° ´©¸¦ ½Ã ½ÇÇàµÉ ÇÔ¼ö
     function submitRow() {
-        // ì…ë ¥ëœ ê°’ë“¤ì„ ê°€ì ¸ì˜µë‹ˆë‹¤.
-        var inputs = document.querySelectorAll('.input-form input[type="text"], .input-form input[type="number"], .input-form select');
 
-        // ì…ë ¥ëœ ê°’ì´ ìœ íš¨í•œì§€ ê²€ì‚¬í•©ë‹ˆë‹¤.
-        var isValid = true;
-        inputs.forEach(function(input) {
-            if (input.hasAttribute('required') && input.value.trim() === '') {
-                // í•„ìˆ˜ ì…ë ¥ í•„ë“œê°€ ë¹„ì–´ìˆëŠ” ê²½ìš°
-                isValid = false;
-                input.classList.add('is-invalid'); // Bootstrapì—ì„œ ì œê³µí•˜ëŠ” ì…ë ¥ í•„ë“œì— ì˜¤ë¥˜ ìŠ¤íƒ€ì¼ ì ìš©
-            }
-        });
+        let tableBody = document.querySelector('.table tbody');
+        let inputs = document.querySelectorAll('.input-form input[type="text"], .input-form input[type="number"], .input-form select');
+		
+        let newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td><input type="checkbox" class="form-check-input" value=""></td>
+            <td><strong>${inputs[0].value}</strong></td>
+            <td>${inputs[1].value}</td>
+            <td>${inputs[2].value}</td>
+            <td>${inputs[3].value}</td>
+            <td>${inputs[4].value}</td>
+            <td>${formatCurrency(inputs[5].value)}</td>
+            <td>${inputs[6].value}</td>
+        `;
 
-        // ìœ íš¨í•œ ê°’ì¸ì§€ í™•ì¸í•˜ê³ , í…Œì´ë¸”ì— í–‰ì„ ì¶”ê°€í•©ë‹ˆë‹¤.
-        if (isValid) {
-            // í…Œì´ë¸”ì˜ tbody ìš”ì†Œë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
-            var tableBody = document.querySelector('.table tbody');
+    
+        tableBody.insertBefore(newRow, tableBody.firstChild);
 
-            // ìƒˆë¡œìš´ í–‰(tr ìš”ì†Œ)ë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
-            var newRow = document.createElement('tr');
-
-            // ìƒˆë¡œìš´ í–‰ì˜ HTML ë‚´ìš©ì„ ì„¤ì •í•©ë‹ˆë‹¤.
-            newRow.innerHTML = `
-                <td><input type="checkbox" class="form-check-input" value=""></td>
-                <td><strong>${inputs[0].value}</strong></td>
-                <td>${inputs[1].value}</td>
-                <td>${inputs[2].value}</td>
-                <td>${inputs[3].value}</td>
-                <td>${inputs[4].value}</td>
-                <td>${inputs[5].value}</td>
-                <td>${inputs[6].value}</td>
-            `;
-
-            // í…Œì´ë¸”ì˜ ì²« ë²ˆì§¸ ìì‹ìœ¼ë¡œ ìƒˆë¡œìš´ í–‰ì„ ì¶”ê°€í•©ë‹ˆë‹¤.
-            tableBody.insertBefore(newRow, tableBody.firstChild);
-
-            // ì…ë ¥ í¼ì„ ì œê±°í•©ë‹ˆë‹¤.
-            var inputForm = document.querySelector('.input-form');
-            inputForm.remove();
-        } else {
-            // í•„ìˆ˜ ì…ë ¥ í•„ë“œê°€ ë¹„ì–´ìˆëŠ” ê²½ìš°, ì‚¬ìš©ìì—ê²Œ ê²½ê³ ë¥¼ í‘œì‹œí•©ë‹ˆë‹¤.
-            // alert('í•„ìˆ˜ ì…ë ¥ í•„ë“œë¥¼ ëª¨ë‘ ì‘ì„±í•´ì£¼ì„¸ìš”.');
-        }
+        let inputForm = document.querySelector('.input-form');
+        inputForm.remove();
     }
-</script>
+    
+	//´Ü°¡ È­Æó Æ÷¸Ë ¼³Á¤
+    function formatCurrency(value){
+    	   let formattedValue = Number(value).toLocaleString('ko-KR');
+    	   return formattedValue;
+    }
+	
+	
+	
+	//¼öÁ¤ ¹öÆ° Å¬¸¯ ½Ã ½ÇÇàµÉ ÇÔ¼ö
+	 function addRow() {
+        let inputForm = `
+            <tr class="input-form" id="trCnt">
+                <td><input type="checkbox" class="form-check-input" value=""></td>
+                <td><input type="text" class="form-control form-control-sm" placeholder="¹øÈ£" oninput="checkNumberStyle(this)"></td>
+                <td><input type="text" class="form-control form-control-sm" placeholder="»óÇ°¹øÈ£"></td>
+                <td>
+	                <select class="form-control form-control-sm">
+	                	<option value="»§">»§</option>
+	                    <option value="ÄÉÀÌÅ©">ÄÉÀÌÅ©</option>
+	                    <option value="µğÀúÆ®">µğÀúÆ®</option>
+	                    <option value="ÄíÅ°">ÄíÅ°</option>
+	                </select>
+            	</td>
+            	
+                <td><input type="text" class="form-control form-control-sm" style="width:120px;" id="name" placeholder="»óÇ°¸í"></td>
+                <td>
+	                <select class="form-control form-control-sm">
+	                	<option value="ÆÇ¸ÅÁß">ÆÇ¸ÅÁß</option>
+	                    <option value="Ç°Àı">Ç°Àı</option>
+	                </select>
+            	</td>
+                <td><input type="number" class="form-control form-control-sm" id="unitPrice" placeholder="´Ü°¡"></td>
+                <td><input type="number" class="form-control form-control-sm" id="quantity" placeholder="»óÇ°¼ö·®"></td>
+				<td><button class="btn btn-outline-primary" style="padding: 0rem 0.4rem; font-size: 0.7rem; margin-right:-10px;" onclick="submitRow()">µî·Ï</button></td>
+				<td><button class="btn btn-outline-primary" style="padding: 0rem 0.4rem; font-size: 0.7rem; margin-right:15px;" onclick="cancleRow()">Ãë¼Ò</button></td>
+            </tr>
+        `;
 
-<!-- ìˆ˜ì • í•¨ìˆ˜ -->
-<script>
-    // ìˆ˜ì • ë²„íŠ¼ í´ë¦­ ì‹œ ì‹¤í–‰ë  í•¨ìˆ˜
+        let tableBody = document.querySelector('.table tbody');
+        tableBody.insertAdjacentHTML('afterbegin', inputForm);
+    }
+
+	/*
+    // ¼öÁ¤ ¹öÆ° Å¬¸¯ ½Ã ½ÇÇàµÉ ÇÔ¼ö
     function updateRow() {
-        // ëª¨ë“  ì²´í¬ë°•ìŠ¤ ìš”ì†Œë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
+        // ¸ğµç Ã¼Å©¹Ú½º ¿ä¼Ò¸¦ °¡Á®¿É´Ï´Ù.
         const checkboxes = document.querySelectorAll('.table tbody .form-check-input');
 
-        // ì„ íƒëœ ì²´í¬ë°•ìŠ¤ê°€ í•˜ë‚˜ì¸ì§€ í™•ì¸í•©ë‹ˆë‹¤.
+        // ¼±ÅÃµÈ Ã¼Å©¹Ú½º°¡ ÇÏ³ªÀÎÁö È®ÀÎÇÕ´Ï´Ù.
         let selectedCount = 0;
         let selectedRow;
         checkboxes.forEach(checkbox => {
@@ -392,110 +436,72 @@
             }
         });
 
-        // ì„ íƒëœ ì²´í¬ë°•ìŠ¤ê°€ í•˜ë‚˜ê°€ ì•„ë‹ˆë©´ ìˆ˜ì •í•  í–‰ì„ ì„ íƒí•˜ë„ë¡ ë©”ì‹œì§€ë¥¼ í‘œì‹œí•©ë‹ˆë‹¤.
+        // ¼±ÅÃµÈ Ã¼Å©¹Ú½º°¡ ÇÏ³ª°¡ ¾Æ´Ï¸é ¼öÁ¤ÇÒ ÇàÀ» ¼±ÅÃÇÏµµ·Ï ¸Ş½ÃÁö¸¦ Ç¥½ÃÇÕ´Ï´Ù.
         if (selectedCount !== 1) {
-            alert('ìˆ˜ì •í•  í–‰ì„ ì„ íƒí•˜ì„¸ìš”.');
+            alert('¼öÁ¤ÇÒ ÇàÀ» ¼±ÅÃÇÏ¼¼¿ä.');
             return;
         }
 
-     // ì„ íƒëœ í–‰ì˜ ì •ë³´ë¥¼ ê°€ì ¸ì™€ì„œ ì…ë ¥ í¼ì— í‘œì‹œí•©ë‹ˆë‹¤.
+        // ¼±ÅÃµÈ ÇàÀÇ Á¤º¸¸¦ °¡Á®¿Í¼­ ÀÔ·Â Æû¿¡ Ç¥½ÃÇÕ´Ï´Ù.
         const cells = selectedRow.querySelectorAll('td');
-        const inputs = document.querySelectorAll('.input-form input[type="text"], .input-form select');
-        if (inputs.length < 8) { // í•„ë“œ ê°œìˆ˜ í™•ì¸
-            alert('ì…ë ¥ í¼ì´ ì¶©ë¶„í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.');
-            return;
-        }
-        inputs[0].value = cells[1].textContent; // ë²ˆí˜¸
-        inputs[1].value = cells[2].textContent; // ìƒí’ˆë²ˆí˜¸
-        inputs[2].value = cells[3].textContent; // êµ¬ë¶„
-        inputs[3].value = cells[4].textContent; // ìƒí’ˆëª…
-        inputs[4].value = cells[5].textContent; // íŒë§¤ìƒíƒœ
-        inputs[5].value = cells[6].textContent; // ë‹¨ê°€
-        inputs[6].value = cells[7].textContent; // ìƒí’ˆìˆ˜ëŸ‰
+        const inputs = document.querySelectorAll('.input-form input[type="text"]');
+        inputs[0].value = cells[3].textContent; // »óÇ°¸í
+        inputs[1].value = cells[4].textContent; // ÀÌ¸§
+        inputs[2].value = cells[5].textContent; // ÆÇ¸ÅÀÏ½Ã
+        inputs[3].value = cells[6].textContent; // ÁÖ¼Ò
+        inputs[4].value = cells[7].textContent; // ¿¬¶ôÃ³
+        inputs[5].value = cells[8].textContent; // ¼ö·®
+        inputs[6].value = cells[9].textContent; // ÆÇ¸Å±İ¾×
+        inputs[7].value = cells[10].textContent; // ¿äÃ»»çÇ×
+        inputs[8].value = cells[11].textContent; // ÁÖ¹®»óÅÂ
 
-        // ì…ë ¥ í¼ì„ í‘œì‹œí•©ë‹ˆë‹¤.
-        document.querySelector('.input-form').style.display = 'table-row'; // ìˆ˜ì •
-
-        // ìˆ˜ì • ì™„ë£Œ ë²„íŠ¼ì˜ ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ë¥¼ ì„¤ì •í•©ë‹ˆë‹¤.
+        // µî·Ï ¹öÆ°À» ¼öÁ¤ ¹öÆ°À¸·Î º¯°æÇÕ´Ï´Ù.
         const submitButton = document.querySelector('.input-form button');
-        submitButton.textContent = 'ìˆ˜ì • ì™„ë£Œ';
+        submitButton.textContent = '¼öÁ¤ ¿Ï·á';
         submitButton.onclick = function() {
-            // ì„ íƒëœ í–‰ì„ ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ìœ¼ë¡œ ì—…ë°ì´íŠ¸í•©ë‹ˆë‹¤.
-            cells[1].textContent = inputs[0].value; // ë²ˆí˜¸
-            cells[2].textContent = inputs[1].value; // ìƒí’ˆë²ˆí˜¸
-            cells[3].textContent = inputs[2].value; // êµ¬ë¶„
-            cells[4].textContent = inputs[3].value; // ìƒí’ˆëª…
-            cells[5].textContent = inputs[4].value; // íŒë§¤ìƒíƒœ
-            cells[6].textContent = inputs[5].value; // ë‹¨ê°€
-            cells[7].textContent = inputs[6].value; // ìƒí’ˆìˆ˜ëŸ‰
+            // ¼±ÅÃµÈ ÇàÀ» »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ¸·Î ¾÷µ¥ÀÌÆ®ÇÕ´Ï´Ù.
+            cells[3].textContent = inputs[0].value; // »óÇ°¸í
+            cells[4].textContent = inputs[1].value; // ÀÌ¸§
+            cells[5].textContent = inputs[2].value; // ÆÇ¸ÅÀÏ½Ã
+            cells[6].textContent = inputs[3].value; // ÁÖ¼Ò
+            cells[7].textContent = inputs[4].value; // ¿¬¶ôÃ³
+            cells[8].textContent = inputs[5].value; // ¼ö·®
+            cells[9].textContent = inputs[6].value; // ÆÇ¸Å±İ¾×
+            cells[10].textContent = inputs[7].value; // ¿äÃ»»çÇ×
+            cells[11].textContent = inputs[8].value; // ÁÖ¹®»óÅÂ
 
-            // ì…ë ¥ í¼ì„ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
+            // ¼öÁ¤ ¿Ï·á ÈÄ ÀÔ·Â ÆûÀ» ÃÊ±âÈ­ÇÕ´Ï´Ù.
             inputs.forEach(input => {
                 input.value = '';
             });
 
-            // ë“±ë¡ ë²„íŠ¼ìœ¼ë¡œ ë‹¤ì‹œ ë³€ê²½í•©ë‹ˆë‹¤.
-            submitButton.textContent = 'ì¶”ê°€';
+            // µî·Ï ¹öÆ°À¸·Î ´Ù½Ã º¯°æÇÕ´Ï´Ù.
+            submitButton.textContent = 'Ãß°¡';
             submitButton.onclick = submitRow;
         };
     }
-</script>
-
-
-<!-- ì‚­ì œ í•¨ìˆ˜ -->
-<script>
-	// ì‚­ì œ ë²„íŠ¼ í´ë¦­ ì‹œ ì‹¤í–‰ë  í•¨ìˆ˜
+    */
+    
+    
+ // »èÁ¦ ¹öÆ° Å¬¸¯ ½Ã ½ÇÇàµÉ ÇÔ¼ö
     function deleteRow() {
-        // ëª¨ë“  ì²´í¬ë°•ìŠ¤ ìš”ì†Œë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
         const checkboxes = document.querySelectorAll('.table tbody .form-check-input');
 
-        // ì²´í¬ëœ ì²´í¬ë°•ìŠ¤ê°€ ìˆëŠ”ì§€ í™•ì¸í•©ë‹ˆë‹¤.
         let checked = false;
         checkboxes.forEach(checkbox => {
             if (checkbox.checked) {
                 checked = true;
-                // ì„ íƒëœ í–‰ ì‚­ì œ ì‘ì—…ì„ ìˆ˜í–‰í•©ë‹ˆë‹¤.
                 checkbox.closest('tr').remove();
             }
         });
 
-        // ì„ íƒëœ í–‰ì´ ì—†ëŠ” ê²½ìš°ì—ëŠ” ê²½ê³  ë©”ì‹œì§€ë¥¼ í‘œì‹œí•©ë‹ˆë‹¤.
         if (!checked) {
-            alert('ì„ íƒëœ í–‰ì´ ì—†ìŠµë‹ˆë‹¤.');
+            alert('¼±ÅÃµÈ ÇàÀÌ ¾ø½À´Ï´Ù.');
         }
     }
 </script>
 
-<!-- ê²€ìƒ‰ì°½ -->
-<script>
-    // DOMContentLoaded ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ë©´, ì½œë°±í•¨ìˆ˜ ì‹¤í–‰
-    document.addEventListener('DOMContentLoaded', function() {
-        // ê²€ìƒ‰ì°½ elementë¥¼ idê°’ìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸°
-        const payrollSearch = document.querySelector('#search-box');
-        // í…Œì´ë¸”ì˜ tbody elementë¥¼ idê°’ìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸°
-        const payrollTable = document.querySelector('#sec tbody');
-
-        // ê²€ìƒ‰ì°½ elementì— keyup ì´ë²¤íŠ¸ ì„¸íŒ…. ê¸€ì ì…ë ¥ ì‹œ ë§ˆë‹¤ ë°œìƒ.
-        payrollSearch.addEventListener('keyup', function() {
-            // ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê²€ìƒ‰ì–´ì˜ valueê°’ì„ ê°€ì ¸ì™€ ì†Œë¬¸ìë¡œ ë³€ê²½í•˜ì—¬ filterValueì— ì €ì¥
-            const filterValue = payrollSearch.value.toLowerCase();
-            // í˜„ì¬ tbodyì•ˆì— ìˆëŠ” ëª¨ë“  tr elementë¥¼ ê°€ì ¸ì™€ rowsì— ì €ì¥
-            const rows = payrollTable.querySelectorAll('tr');
-
-            //trë“¤ forë¬¸ìœ¼ë¡œ ìˆœíšŒ
-            for (var i = 0; i < rows.length; i++) {
-                // í˜„ì¬ ìˆœíšŒì¤‘ì¸ trì˜ textContentë¥¼ ì†Œë¬¸ìë¡œ ë³€ê²½í•˜ì—¬ rowTextì— ì €ì¥
-                var rowText = rows[i].textContent.toLowerCase();
-                // rowTextê°€ filterValueë¥¼ í¬í•¨í•˜ë©´, í•´ë‹¹ trì€ ë³´ì—¬ì§€ê²Œ í•˜ê³ , ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ ìˆ¨ê¸´ë‹¤.
-                if (rowText.includes(filterValue)) {
-                    rows[i].style.display = '';
-                } else {
-                    rows[i].style.display = 'none';
-                }
-            }
-        });
-    });
-</script>
-
+</body>
+</html>
 </body>
 </html>
